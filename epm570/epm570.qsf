@@ -1,0 +1,86 @@
+# EPM570T100C5 (MAX II): the 1818VG93 model with the microcode in the UFM and the Beta Disk glue (bdi_top),
+# for a board with a 50 MHz oscillator on pin 64 and a floppy drive wired straight to the device.
+# The common model is ../rtl; the files here replace vg93_urom.v (UFM reader), vg93_dcnt.v (carry chain
+# counters) and the includes vg93_ucode.vh (re-encoded microcode) and vg93_config.vh (the build macros):
+# SEARCH_PATH lists this directory first.
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE EPM570T100C5
+set_global_assignment -name TOP_LEVEL_ENTITY epm570_board
+set_global_assignment -name SEARCH_PATH .
+set_global_assignment -name SEARCH_PATH ../rtl
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_counters.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_crc.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_data_channel.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_decoder.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_drive.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_host_bus.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_read_path.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_sequencer.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_status.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_task_regs.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_timing.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/vg93_write_path.v
+set_global_assignment -name VERILOG_FILE bdi_top.v
+set_global_assignment -name VERILOG_FILE epm570_board.v
+set_global_assignment -name VERILOG_FILE fdd_glue.v
+set_global_assignment -name VERILOG_FILE vg93_dcnt.v
+set_global_assignment -name VERILOG_FILE vg93_ufm.v
+set_global_assignment -name VERILOG_FILE vg93_urom.v
+set_global_assignment -name SDC_FILE epm570.sdc
+set_global_assignment -name OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name MAXII_OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name AUTO_PACKED_REGISTERS_MAXII "MINIMIZE AREA"
+set_global_assignment -name SEED 1
+# pins of the board (EPM570 pin numbers): bus from the Spectrum, the drive, the oscillator
+set_location_assignment PIN_64 -to SYSCLK
+set_location_assignment PIN_52 -to A1
+set_location_assignment PIN_95 -to DOS_n
+set_location_assignment PIN_97 -to IORQ_n
+set_location_assignment PIN_99 -to WR_n
+set_location_assignment PIN_50 -to M1_n
+set_location_assignment PIN_51 -to MREQ_n
+set_location_assignment PIN_48 -to RD_n
+set_location_assignment PIN_49 -to RESET_n
+set_location_assignment PIN_47 -to DOS_BOOT
+set_location_assignment PIN_44 -to DOS_DIS
+set_location_assignment PIN_53 -to A[5]
+set_location_assignment PIN_54 -to A[6]
+set_location_assignment PIN_55 -to A[7]
+set_location_assignment PIN_56 -to A[8]
+set_location_assignment PIN_57 -to A[9]
+set_location_assignment PIN_58 -to A[10]
+set_location_assignment PIN_62 -to A[11]
+set_location_assignment PIN_67 -to A[12]
+set_location_assignment PIN_69 -to A[13]
+set_location_assignment PIN_71 -to A[14]
+set_location_assignment PIN_73 -to A[15]
+set_location_assignment PIN_75 -to D[0]
+set_location_assignment PIN_77 -to D[1]
+set_location_assignment PIN_81 -to D[2]
+set_location_assignment PIN_83 -to D[3]
+set_location_assignment PIN_85 -to D[4]
+set_location_assignment PIN_87 -to D[5]
+set_location_assignment PIN_89 -to D[6]
+set_location_assignment PIN_91 -to D[7]
+# the drive connector (pins.md: drive pins 2, 8, 10 .. 34 on EPM570 pins 61 .. 96, 100, 98)
+set_location_assignment PIN_61 -to DENSEL_n
+set_location_assignment PIN_66 -to INDEX_n
+set_location_assignment PIN_68 -to SELECT0_n
+set_location_assignment PIN_70 -to SELECT1_n
+set_location_assignment PIN_72 -to SELECT2_n
+set_location_assignment PIN_74 -to START_n
+set_location_assignment PIN_76 -to DIR_n
+set_location_assignment PIN_78 -to STEP_n
+set_location_assignment PIN_82 -to WDATA_n
+set_location_assignment PIN_84 -to WGATE_n
+set_location_assignment PIN_86 -to TRK00_n
+set_location_assignment PIN_100 -to WPT_n
+set_location_assignment PIN_98 -to RDATA_n
+set_location_assignment PIN_92 -to SIDE1_n
+set_location_assignment PIN_96 -to DSKCHG_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to INDEX_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to TRK00_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to WPT_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to RDATA_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to DSKCHG_n
