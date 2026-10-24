@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // The drive side (sheets misc_logic, tr43, step_prescaler, shared_logic, parts of int_gen and reg_read_logic):
 // drive status inputs, head positioning (step rate, STEP, DIRC, TG43) and head load (HLD with HLT).

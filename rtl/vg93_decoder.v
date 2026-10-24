@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Microword decoder: the only place where the bits of the microword are interpreted. A function of the word only;
 // the executing blocks combine these named actions with their state. One table row per microcommand

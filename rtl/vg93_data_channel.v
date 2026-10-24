@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // The byte channel between the host and the disk (sheets data_reg, sig_driver_logic, the FORMAT part of
 // data_writer): data register DATA, shift register DATA_SHIFT, the handshake DRQ / LOST, the special bytes of

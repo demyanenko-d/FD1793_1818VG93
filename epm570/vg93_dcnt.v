@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Down counter, MAX II build (rtl_epm570): replaces rtl/behav/vg93_dcnt.v (its simulation model; the simulation
 // of the EPM570 build uses that plain version). The counter on the MAX II carry chain, one LE per bit (arithmetic

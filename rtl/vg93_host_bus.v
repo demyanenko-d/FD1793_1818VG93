@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Host bus interface (sheets io_ports, addr_decoder, reg_read_logic, the write captures of cmd_reg, trk_reg,
 // sect_reg, data_reg).

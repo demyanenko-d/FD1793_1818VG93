@@ -2,13 +2,13 @@
 
 ## Благодарности
 
-Спасибо **deathsoft** за транзисторную схему кристалла 1818ВГ93 и дамп ПЗУ микропрограммы и **titus** за вентильный RTL
+Спасибо **deathsoft** за транзисторную схему кристалла 1818ВГ93 и дамп ПЗУ микропрограммы и **dr.Titus** за вентильный RTL
 и расшифровку микрокода. Без их реверса этой модели не было бы.
 
 ## Thanks
 
 Thanks to **deathsoft** for the transistor-level schematic of the 1818VG93 die and the microcode ROM dump, and to
-**titus** for the gate-level RTL and the decoding of the microcode. This model would not exist without their reverse
+**dr.Titus** for the gate-level RTL and the decoding of the microcode. This model would not exist without their reverse
 engineering.
 
 ## Что это
@@ -23,7 +23,7 @@ engineering.
   именованные действия вместо битов микрослова. Там, где поведение кристалла держится на гонках и асинхронных
   защёлках, модель повторяет их результат, а не устройство.
 - **Использует настоящий микрокод.** Секвенсор исполняет ПЗУ микропрограммы, снятое с кристалла (дамп deathsoft,
-  расшифровка titus; 256 слов по 19 бит, `rtl/vg93-microcode-rom.hex`), — не переписанный заново автомат. Поэтому все команды, тайминги и
+  расшифровка dr.Titus; 256 слов по 19 бит, `rtl/vg93-microcode-rom.hex`), — не переписанный заново автомат. Поэтому все команды, тайминги и
   особенности (включая недокументированные) такие же, как у микросхемы.
 - **Особенности кристалла сохранены.** В том числе дефект детекторов синхрометок A1 / C2 (не смотрят на бит 13
   канального слова), на котором держатся защиты игр; поведение FD1793 включается макросом.
@@ -44,7 +44,7 @@ for FPGAs.
   actions instead of microword bits. Where the chip relies on races and asynchronous latches, the model reproduces
   their result, not their structure.
 - **Uses the real microcode.** The sequencer runs the microprogram ROM taken from the die (dump by deathsoft, decoded
-  by titus; 256 words of 19 bits, `rtl/vg93-microcode-rom.hex`), not a rewritten state machine, so all commands, timings and quirks (undocumented ones
+  by dr.Titus; 256 words of 19 bits, `rtl/vg93-microcode-rom.hex`), not a rewritten state machine, so all commands, timings and quirks (undocumented ones
   included) are those of the chip.
 - **The quirks of the die are kept**, among them the defect of the A1 / C2 sync mark detectors (channel bit 13 is not
   compared), which game copy protections rely on; the FD1793 behaviour is a build option.
@@ -60,7 +60,7 @@ for FPGAs.
   и предкомпенсация для дисковода, подключённого напрямую); общий код берёт из `rtl/`.
 - `datasheet/fd1793_1818vg93.md` (английский) и `datasheet/fd1793_1818vg93_ru.md` (русский) — даташит, исправленный по кристаллу: все ошибки и противоречия даташита
   WD FD179X-02 исправлены, описано реальное поведение микросхемы, список исправлений; приложение — микропрограмма
-  (формат микрослова, микрооперации, всё ПЗУ). `datasheet/microcode/` — дамп ПЗУ и листинг с расшифровкой titus.
+  (формат микрослова, микрооперации, всё ПЗУ). `datasheet/microcode/` — дамп ПЗУ и листинг с расшифровкой dr.Titus.
 
 ## Files
 
@@ -72,7 +72,7 @@ for FPGAs.
   `rtl/`.
 - `datasheet/fd1793_1818vg93.md` (English) and `datasheet/fd1793_1818vg93_ru.md` (Russian) — the datasheet corrected to the die: every error and contradiction of the WD FD179X-02
   datasheet fixed, the real behaviour of the chip described, the list of corrections; appendix — the microprogram
-  (microword format, micro-operations, the whole ROM). `datasheet/microcode/` — the ROM dump and titus's decoded
+  (microword format, micro-operations, the whole ROM). `datasheet/microcode/` — the ROM dump and dr.Titus's decoded
   listing.
 
 ## Как использовать

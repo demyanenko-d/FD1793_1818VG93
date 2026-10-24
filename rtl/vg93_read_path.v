@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Read data path (sheets raw_sampler, am_detector, am_selector, mfm_decoder, part of shared_logic and misc_logic).
 //

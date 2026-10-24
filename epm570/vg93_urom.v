@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Microcode store, MAX II build (rtl_epm570): replaces rtl/behav/vg93_urom.v. The re-encoded program
 // (sim/vg93-ucode.hex, field codes in vg93_ucode.vh) is in the UFM (vg93_ufm, image vg93-ufm19.mif by

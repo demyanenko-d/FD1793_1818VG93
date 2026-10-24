@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Microword fields and microcommand codes: included by vg93_decoder only, the one place where the microword is
 // interpreted (tools/check_behav_style.py checks it). The encodings of the decoder outputs are in vg93_actions.vh.

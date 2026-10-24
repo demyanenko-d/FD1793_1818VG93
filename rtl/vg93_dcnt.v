@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Down counter with load and shift (CNT1, CNT2, the step rate counter):
 //   ena && sload: q <= d;  ena && shift: q <= q << 1;  ena: q <= q - 1.

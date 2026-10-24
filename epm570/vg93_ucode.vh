@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // MAX II build (rtl_epm570): replaces rtl/behav/vg93_ucode.vh (the Quartus SEARCH_PATH and the simulation
 // +incdir list rtl_epm570/rtl first). The same program, re-encoded for a smaller decoder (sim/vg93-ucode.hex from

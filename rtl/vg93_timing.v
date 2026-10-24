@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Timing of the chip: when a microword ends, when its second half runs, when a bit cell of the disk ends.
 // The other blocks see only the outputs of this module.

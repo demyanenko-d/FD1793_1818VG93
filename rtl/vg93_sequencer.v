@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Microprogram sequencer (sheets instruction_logic, shared_logic): program counter, the jump condition and the
 // skip; the microcode store (vg93_urom: the ROM in block RAM) delivers the word at the new address. The readable

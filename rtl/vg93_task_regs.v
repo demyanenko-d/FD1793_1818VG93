@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // The registers of a command (sheets cmd_reg, trk_reg, sect_reg, serial_inc_dec, ser_comp): command register OP,
 // track register TRK, sector register SEC, and the serial ALU that steps TRK and compares numbers.

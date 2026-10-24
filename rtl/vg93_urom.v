@@ -1,4 +1,4 @@
-// Thanks to deathsoft for the transistor-level schematic of the chip and to titus for the gate-level RTL.
+// Thanks to deathsoft for the transistor-level schematic of the chip and to dr.Titus for the gate-level RTL.
 //
 // Microcode store: the ROM in block RAM, read with the address of the coming word at the word end (REG_MCMD
 // takes it there, as on the chip). The image is docs/microcode/vg93-microcode-rom.hex (the simulation scripts copy
